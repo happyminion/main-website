@@ -1,0 +1,420 @@
+/*General styles*/
+
+body {
+    animation: fadeIn 0.6s linear;
+}
+
+button:focus {
+    outline: none;
+}
+h1 {
+    font-family: 'Fascinate Inline', cursive;
+    padding-top: 3%;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*IE 10&11 compatibility*/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #navbarNav ul {
+        margin-right: 40%;
+    }
+}
+
+/*Main content*/
+
+.container-fluid {
+    padding: 0;
+}
+
+/*Background image*/
+
+#mainDiv{
+    background-image: url("../images/brickWall.jpg");
+    overflow: hidden;
+}
+
+/*Navbar*/
+
+#mainDiv > .navbar {
+    background-color: black;
+    left: -2000px;
+    animation: navbarSlide 2s forwards;
+}
+nav a {
+    color: white;
+    text-transform: uppercase;
+}
+nav a:hover {
+    color: darkturquoise;
+}
+.navbar-toggler-icon {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,206,209, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/*About-text box*/
+
+#about {
+    background-color: white;
+    margin-top: 100%;
+    margin-left: 45%;
+    width: 650px;
+    height: 552px;
+    animation: divSlide 2s 0.5s forwards;
+}
+#text {
+    padding: 3%;
+}
+
+/*Skill icons*/
+
+#about ul {
+    padding-top: 2%;
+}
+#about ul li{
+    list-style: none;
+    display: inline;
+}
+#about ul img {
+    width: 30px;
+    height: auto;
+}
+
+/*Animation pages fade in*/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Animation navbar slide in*/
+@keyframes navbarSlide {
+    100% {
+        left: 0;
+    }
+}
+@-webkit-keyframes navbarSlide {
+    100% {
+        left: 0;
+    }
+}
+@-moz-keyframes navbarSlide {
+    100% {
+        left: 0;
+    }
+}
+@-o-keyframes navbarSlide {
+    100% {
+        left: 0;
+    }
+}
+
+    /*Animation about div slide in*/
+@keyframes divSlide {
+    100% {
+        margin-top: 10%;
+    }
+}
+@-webkit-keyframes divSlide {
+    100% {
+        margin-top: 10%;
+    }
+}
+@-moz-keyframes divSlide {
+    100% {
+        margin-top: 10%;
+    }
+}
+@-o-keyframes divSlide {
+    100% {
+        margin-top: 10%;
+    }
+}
+
+/*Portrait*/
+
+/*iPad Pro*/
+
+@media only screen and (min-width: 770px) and (max-width: 1025px) and (orientation : portrait) {
+    #mainDiv {
+        width: 1024px;
+        height: 1366px;
+    }
+    #about {
+        margin-top: 1366px;
+        height: 1000px;
+        margin-left: 30%;
+
+    }
+    /*Animation about div slide in*/
+    @keyframes divSlide {
+        100% {
+            margin-top: 35%;
+        }
+    }
+    @-webkit-keyframes divSlide {
+        100% {
+            margin-top: 35%;
+        }
+    }
+}
+
+/*iPad*/
+
+@media only screen and (min-width: 416px) and (max-width: 769px) and (orientation : portrait) {
+    #mainDiv {
+        width:768px;
+        height:1024px;
+    }
+    #about {
+        margin-top: 1024px;
+        margin-left: 10%;
+        height: 1000px;
+    }
+    /*Animation about div slide in*/
+    @keyframes divSlide {
+        100% {
+            margin-top: 28%;
+        }
+    }
+    @-webkit-keyframes divSlide {
+        100% {
+            margin-top: 28%;
+        }
+    }
+}
+
+/*iPhone 6 Plus*/
+
+@media only screen and (min-width: 377px) and (max-width: 415px) and (orientation : portrait) {
+    #mainDiv {
+        height:736px;
+    }
+    #about {
+        margin-top: 736px;
+        width: 380px;
+        height: 736px;
+        margin-left: 4%;
+        margin-right: 1%;
+    }
+    #about ul {
+        margin-right: 7%;
+    }
+}
+
+/*iPhone 6*/
+
+@media only screen and (min-width: 375px) and (max-width: 376px) and (orientation : portrait) {
+    #mainDiv {
+        height:667px;
+        overflow: auto;
+    }
+    #about {
+        margin-top: 667px;
+        width:350px;
+        height:667px;
+        margin-left: 3%;
+    }
+    #about ul {
+        margin-right: 7%;
+    }
+}
+
+/*iPhone 5*/
+
+@media only screen and (max-width: 321px) and (orientation : portrait) {
+    #mainDiv {
+        height:568px;
+        overflow: auto;
+    }
+    #about {
+        margin-top: 568px;
+        width:320px;
+        height: 550px;
+        margin-left: 0;
+    }
+    #text {
+        font-size: 0.8em;
+    }
+    #about ul {
+        margin-right: 7%;
+    }
+    #about ul img {
+        width: 25px;
+        height: auto;
+    }
+}
+
+/*Nexus 5X, Nexus 6P*/
+
+@media only screen and (min-width: 376px) and (max-width: 413px) and (orientation : portrait){
+    #mainDiv {
+        overflow: auto;
+    }
+    #about {
+        height: 640px;
+    }
+}
+
+/*Galaxy S5*/
+
+@media only screen and (min-width: 322px) and (max-width: 361px) and (orientation : portrait) {
+    #mainDiv {
+        overflow: auto;
+        height: 640px;
+    }
+    #about {
+        width: 330px;
+        height: 530px;
+        margin-left: 4%;
+        margin-right: 20%;
+    }
+    #text {
+        font-size: 0.8em;
+    }
+    #about ul {
+        margin-right: 10%;
+    }
+    #about ul img {
+        width: 25px;
+        height: auto;
+    }
+}
+
+/*Landscape*/
+
+/*iPad Pro*/
+
+@media only screen and (min-width: 1026px) and (max-width: 1367px) and (orientation : landscape) {
+    #mainDiv {
+        height: 1024px;
+    }
+    #about {
+        margin-top: 900px;
+        height: 800px;
+        margin-left: 40%;
+    }
+    /*Animation about div slide in*/
+    @keyframes divSlide {
+        100% {
+            margin-top: 20%;
+        }
+    }
+    @-webkit-keyframes divSlide {
+        100% {
+            margin-top: 20%;
+        }
+    }
+}
+
+/*iPad*/
+
+@media only screen and (min-width: 738px) and (max-width: 1025px) and (orientation : landscape) {
+    #mainDiv {
+        height: 768px;
+    }
+    #about {
+        height: 700px;
+        margin-top: 768px;
+        margin-left: 30%;
+    }
+}
+/*iPhone 6 Plus*/
+
+@media only screen and (min-width: 669px) and (max-width: 737px) and (orientation : landscape) {
+    #about {
+        margin-left: 5%;
+    }
+}
+
+/*iPhone 5*/
+
+@media only screen and (max-width: 569px) and (orientation : landscape) {
+    #about {
+        width: 540px;
+        margin-left: 2.5%;
+    }
+}
+/*Nexus 5X, Nexus 6P*/
+
+@media only screen and (min-width: 642px) and (max-width: 733px) and (orientation : landscape) {
+    #about {
+        margin-left: 3%;
+    }
+}
+
+/*Galaxy S5*/
+
+@media only screen and (max-width: 641px) and (orientation : landscape) {
+    #about {
+        width: 600px;
+        margin-left: 3%;
+    }
+}
+
+
+/*Desktops*/
+
+@media only screen and (max-width: 1439px) {
+    #about {
+        margin-top: 800px;
+        height: 800px;
+    }
+}
+
+
+@media only screen and (min-width: 1440px) and (max-width: 1600px) {
+    #about {
+        margin-top: 720px;
+        height: 700px;
+    }
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1919px) {
+    #about {
+        margin-top: 870px;
+        height: 850px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    #about {
+        margin-top: 1400px;
+        height: 1000px;
+        margin-left: 55%;
+    }
+}

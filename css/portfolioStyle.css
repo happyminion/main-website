@@ -1,0 +1,259 @@
+/*General styles*/
+
+body {
+    animation: fadeIn 0.6s linear;
+}
+
+a:focus {
+    outline: none;
+}
+h4, h5 {
+    font-size: 30px;
+    font-family: 'Fascinate Inline', cursive;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*IE 10&11 compatibility*/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+}
+
+/*Navbar*/
+
+.navbar {
+    background-color: black;
+    left: -2000px;
+    animation: navbarSlide 2s forwards;
+}
+nav a {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+nav a:hover {
+    color: darkturquoise;
+}
+.navbar-toggler-icon {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,206,209, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/*Text box*/
+
+#textBox {
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+/*Portfolio item*/
+
+.textOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+.textOverlay h4 {
+    margin-top: 25%;
+}
+.imgDiv {
+    overflow: hidden;
+    background-color:white;
+}
+.imgDiv img {
+    position: relative;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.portfolio:hover .textOverlay {
+    opacity: 1;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+    color: whitesmoke;
+}
+.textOverlay h4 {
+    font-family: 'Fascinate Inline', cursive;
+    color: darkturquoise;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    text-transform: uppercase;
+}
+.portfolio:hover img {
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
+    -webkit-animation:changeOpacity 0.5s forwards;
+    -moz-animation: changeOpacity 0.5s forwards;
+    -o-animation:changeOpacity 0.5s forwards;
+    animation:changeOpacity 0.5s forwards;
+}
+#portfolioItems {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#portfolioItems .col-xl-4 {
+  padding-left: 0;
+    padding-right: 0;
+}
+
+/*Modal*/
+.modal-dialog {
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+}
+.modal-content {
+    height: auto;
+    border-radius: 0;
+}
+.modal-footer a {
+    color: whitesmoke;
+    background-color: black;
+    cursor: pointer;
+    border-color: black;
+}
+.modal-footer a:hover, .modal-footer a:focus, .modal-footer a:active {
+    background-color: darkturquoise;
+    border-color: black;
+    color: black;
+    outline: yellow;
+}
+
+/*Animation pages fade in*/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Animation navbar slide in*/
+@keyframes navbarSlide {
+    100% {
+        left: 0;
+    }
+}
+@-webkit-keyframes navbarSlide {
+    100% {
+        left: 0;
+    }
+}
+@-moz-keyframes navbarSlide {
+    100% {
+        left: 0;
+    }
+}
+@-o-keyframes navbarSlide {
+    100% {
+        left: 0;
+    }
+}
+
+/*Animation <a> change opacity*/
+@keyframes changeOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+@-webkit-keyframes changeOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+@-moz-keyframes changeOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+@-o-keyframes changeOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+/*Animation <a> zoom */
+@keyframes zoomItem {
+    100% {
+        transform: scale(1.5);
+    }
+}
+@-webkit-keyframes zoomItem {
+    100% {
+        transform: scale(1.5);
+    }
+}
+@-moz-keyframes zoomItem {
+    100% {
+        transform: scale(1.5);
+    }
+}
+@-o-keyframes zoomItem {
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+/*Mobile compatibility*/
+
+@media only screen and (max-width: 415px) and (orientation : portrait) {
+    .modal-content {
+        margin-right: 5%;
+    }
+}
+@media only  screen and (min-width: 736px) and (max-width: 737px) and (orientation : landscape){
+    #portfolioItems {
+        margin-left: 0.5%;
+    }
+}
